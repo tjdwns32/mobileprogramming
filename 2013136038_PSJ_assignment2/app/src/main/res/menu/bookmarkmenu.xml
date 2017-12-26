@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_add"
+        android:title="추가"
+        app:showAsAction="always" />
+    <!---메뉴 아이콘 말고 바로 타이틀 확인할 수 있게함-->
+</menu>

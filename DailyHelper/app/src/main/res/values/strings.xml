@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Daily Helper</string>
+    <string name="title_activity_add_table">AddTableActivity</string>
+</resources>

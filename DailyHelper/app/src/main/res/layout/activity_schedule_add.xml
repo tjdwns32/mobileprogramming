@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BTN_LAYOUT">
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/CANCEL"
+            android:text="취소"/>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/ADD"
+            android:layout_toRightOf="@+id/CANCEL"
+            android:text="저장" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_height="2px"
+        android:layout_width="match_parent"
+        android:layout_below="@id/BTN_LAYOUT"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/BORDER_0"
+        android:background="#0000ff"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/title"
+        android:layout_below="@id/BORDER_0"
+        android:id="@+id/TITLE_IMG" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="제목(한줄 이내 작성)"
+        android:textSize="20dp"
+        android:maxLines="1"
+        android:layout_below="@id/TITLE_IMG"
+        android:id="@+id/TITLE"
+        android:inputType="text"
+        android:imeOptions="actionDone"/>
+
+    <RatingBar
+        android:id="@+id/PRIORITY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TITLE"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="1"
+        android:max="5" />
+
+    <View
+        android:layout_height="2px"
+        android:layout_width="match_parent"
+        android:layout_below="@id/PRIORITY"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/BORDER_1"
+        android:background="#0000ff" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/BORDER_1"
+        android:src="@drawable/clock"
+        android:id="@+id/CLOCK_IMG"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TIME_LAYOUT"
+        android:orientation="vertical"
+        android:layout_below="@+id/CLOCK_IMG">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/START_TEXTVIEW"
+            android:textSize="20dp"
+            android:text="시작 시간"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/START_TIME"
+            android:layout_toRightOf="@id/START_TEXTVIEW"
+            android:textSize="20dp"
+            android:gravity="right"
+            android:text="클릭하여 시간지정"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/START_TEXTVIEW"
+            android:id="@+id/END_TEXTVIEW"
+            android:textSize="20dp"
+            android:text="종료 시간"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/START_TEXTVIEW"
+            android:layout_toRightOf="@+id/END_TEXTVIEW"
+            android:id="@+id/END_TIME"
+            android:textSize="20dp"
+            android:gravity="right"
+            android:text="클릭하여 시간지정"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_height="2px"
+        android:layout_width="match_parent"
+        android:layout_below="@id/TIME_LAYOUT"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/BORDER_2"
+        android:background="#0000ff"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/map"
+        android:layout_below="@id/BORDER_2"
+        android:id="@+id/PLACE_IMG"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PLACE_IMG"
+        android:id="@+id/PLACE"
+        android:textSize="20dp"
+        android:hint="장소"
+        android:inputType="text"
+        android:imeOptions="actionNext"/>
+
+    <View
+        android:layout_height="2px"
+        android:layout_width="match_parent"
+        android:layout_below="@id/PLACE"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/BORDER_3"
+        android:background="#0000ff"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/edit_black"
+        android:layout_below="@id/BORDER_3"
+        android:id="@+id/CONTENT_IMG"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CONTENT_IMG"
+        android:maxLines="5"
+        android:id="@+id/CONTENT"
+        android:textSize="10dp"
+        android:hint="내용(5줄 이내 작성)"
+        android:inputType="text"
+        android:imeOptions="actionDone"/>
+
+    <View
+        android:layout_height="2px"
+        android:layout_width="match_parent"
+        android:layout_below="@id/CONTENT"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/BORDER_4"
+        android:background="#0000ff"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/alarm"
+        android:layout_below="@id/BORDER_4"
+        android:id="@+id/ALARM_IMG"/>
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ALARM_IMG"
+        android:id="@+id/ALARM_OK"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ALARM_OK"
+        android:id="@+id/ALARM_OFFSET"
+        android:textSize="20dp"
+        android:text="알람 시간 지정"/>
+
+    <View
+        android:layout_height="2px"
+        android:layout_width="match_parent"
+        android:layout_below="@id/ALARM_OFFSET"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/BORDER_5"
+        android:background="#0000ff"/>
+
+</RelativeLayout>
